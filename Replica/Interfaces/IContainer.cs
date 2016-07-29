@@ -8,7 +8,7 @@
 	public interface IContainer {
 
 		TService GetInstance<TService>([CallerMemberName] string methodName = null) where TService : class;
-		object GetInstnace(Type type, [CallerMemberName] string methodName = null);
+		object GetInstance(Type type, [CallerMemberName] string methodName = null);
 
 	}
 
