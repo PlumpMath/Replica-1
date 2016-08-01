@@ -94,15 +94,25 @@
     <Compile Include="Bootstrap.cs" />
     <Compile Include="Interfaces\IContainer.cs" />
     <Compile Include="Interfaces\IDebugger.cs" />
+    <Compile Include="Interfaces\IDeviceChangeNotifier.cs" />
     <Compile Include="Interfaces\IIssue.cs" />
     <Compile Include="Interfaces\IIssueContainer.cs" />
     <Compile Include="Models\Instruction.cs" />
     <Compile Include="Models\Issue.cs" />
+    <Compile Include="Native\DeviceBroadcastHandle.cs" />
+    <Compile Include="Native\DeviceBroadcastHeader.cs" />
+    <Compile Include="Native\DeviceBroadcastMessages.cs" />
+    <Compile Include="Native\DeviceType.cs" />
+    <Compile Include="Native\NativeMethods.cs" />
+    <Compile Include="Native\WindowMessages.cs" />
+    <Compile Include="Native\WindowPosFlags.cs" />
+    <Compile Include="Native\WindowLongFlags.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Container.cs" />
     <Compile Include="Services\Debugger.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Services\DeviceChangeNotifier.cs" />
     <Compile Include="Services\IssueContainer.cs" />
     <Compile Include="Services\Settings.cs" />
     <Compile Include="Services\Settings.Instructions.cs" />
@@ -120,9 +130,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Native\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
