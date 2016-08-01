@@ -64,7 +64,7 @@
 		public void WriteLine(string line) {
 
 			// During development, writing each line into console
-			Debug.WriteLine($"{++_lineIndex,4}: {line}");
+			Debug.WriteLine($"{++_lineIndex,4}: \t{line}");
 
 			// Adding message into queue and starting background-worker, if not busy
 			_queue.Enqueue(line);

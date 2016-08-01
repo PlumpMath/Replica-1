@@ -20,8 +20,14 @@
 			container.Register(() => container, Lifestyle.Singleton);
 			container.Register<IContainer, Services.Container>(Lifestyle.Singleton);
 
-			// IDebugger
-			container.RegisterSingleton(() => new Services.Debugger(AppDomain.CurrentDomain.BaseDirectory));
+			// Services
+			container.RegisterSingleton<IDebugger>(() => new Services.Debugger(AppDomain.CurrentDomain.BaseDirectory));
+			container.RegisterSingleton<IIssueContainer, Services.IssueContainer>();
+			container.RegisterSingleton<Services.Settings>(() => Services.Settings.Create(container.GetInstance<IContainer>()));
+
+			// Requesting services
+			container.GetInstance<IDebugger>().Trace();
+			container.GetInstance<Services.Settings>();
 
 		}
 
