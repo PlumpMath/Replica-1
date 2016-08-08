@@ -23,8 +23,11 @@
 			// Services
 			container.RegisterSingleton<IDebugger>(() => new Services.Debugger(AppDomain.CurrentDomain.BaseDirectory));
 			container.RegisterSingleton<IIssueContainer, Services.IssueContainer>();
-			container.RegisterSingleton<IDeviceChangeNotifier, Services.DeviceChangeNotifier>();
+			container.RegisterSingleton<IDeviceManager, Services.DeviceManager>();
 			container.RegisterSingleton<Services.Settings>(() => Services.Settings.Create(container.GetInstance<IContainer>()));
+
+			// Models
+			container.Register<IDevice, Models.Device>(Lifestyle.Transient);
 
 			// Requesting services
 			container.GetInstance<IDebugger>().Trace();

@@ -94,15 +94,27 @@
     <Compile Include="Bootstrap.cs" />
     <Compile Include="Interfaces\IContainer.cs" />
     <Compile Include="Interfaces\IDebugger.cs" />
-    <Compile Include="Interfaces\IDeviceChangeNotifier.cs" />
+    <Compile Include="Interfaces\IDevice.cs" />
+    <Compile Include="Interfaces\IDeviceManager.cs" />
     <Compile Include="Interfaces\IIssue.cs" />
     <Compile Include="Interfaces\IIssueContainer.cs" />
+    <Compile Include="Interop\EventArgs\DeviceArrivedEventArgs.cs" />
+    <Compile Include="Interop\EventArgs\DeviceQueryRemoveEventArgs.cs" />
+    <Compile Include="Interop\EventArgs\DeviceRemovedEventArgs.cs" />
+    <Compile Include="Interop\EventHandlers\DeviceChangeEventHandler.cs" />
+    <Compile Include="Models\Device.cs" />
     <Compile Include="Models\Instruction.cs" />
     <Compile Include="Models\Issue.cs" />
     <Compile Include="Native\DeviceBroadcastHandle.cs" />
     <Compile Include="Native\DeviceBroadcastHeader.cs" />
     <Compile Include="Native\DeviceBroadcastMessages.cs" />
+    <Compile Include="Native\DeviceNotifyFlags.cs" />
     <Compile Include="Native\DeviceType.cs" />
+    <Compile Include="Native\FileAttributes.cs" />
+    <Compile Include="Native\FileCreationDisposition.cs" />
+    <Compile Include="Native\FileDesiredAccess.cs" />
+    <Compile Include="Native\FileFlags.cs" />
+    <Compile Include="Native\FileSystemFeature.cs" />
     <Compile Include="Native\NativeMethods.cs" />
     <Compile Include="Native\WindowMessages.cs" />
     <Compile Include="Native\WindowPosFlags.cs" />
@@ -112,7 +124,7 @@
     <Compile Include="Services\Debugger.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Services\DeviceChangeNotifier.cs" />
+    <Compile Include="Services\DeviceManager.cs" />
     <Compile Include="Services\IssueContainer.cs" />
     <Compile Include="Services\Settings.cs" />
     <Compile Include="Services\Settings.Instructions.cs" />
