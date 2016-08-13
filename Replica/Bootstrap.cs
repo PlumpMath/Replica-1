@@ -23,6 +23,9 @@
 			// Services
 			container.RegisterSingleton<IDebugger>(() => new Services.Debugger(AppDomain.CurrentDomain.BaseDirectory));
 			container.RegisterSingleton<IIssueContainer, Services.IssueContainer>();
+			container.RegisterSingleton<ICron, Services.Cron>();
+			container.RegisterSingleton<IUnixTime, Services.UnixTime>();
+			container.Register<IDirectoryWatcher, Services.DirectoryWatcher>(Lifestyle.Transient);
 			container.RegisterSingleton<IDeviceManager, Services.DeviceManager>();
 			container.RegisterSingleton<Services.Settings>(() => Services.Settings.Create(container.GetInstance<IContainer>()));
 
