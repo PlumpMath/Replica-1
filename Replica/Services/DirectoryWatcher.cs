@@ -16,7 +16,6 @@
 		public event DirectoryChangedEventHandler DirectoryChanged;
 
 		private FileSystemWatcher _fileSystemWatcher;
-		private bool _fileSystemWatcherLastState;
 		private int _cronTaskIdentifier;
 
 		private bool _isDisposed;
