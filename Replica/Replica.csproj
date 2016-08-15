@@ -98,6 +98,7 @@
     <Compile Include="Interfaces\IDevice.cs" />
     <Compile Include="Interfaces\IDeviceManager.cs" />
     <Compile Include="Interfaces\IDirectoryWatcher.cs" />
+    <Compile Include="Interfaces\IInstructionManager.cs" />
     <Compile Include="Interfaces\IIssue.cs" />
     <Compile Include="Interfaces\IIssueContainer.cs" />
     <Compile Include="Interfaces\IUnixTime.cs" />
@@ -105,8 +106,12 @@
     <Compile Include="Interop\EventArgs\DeviceQueryRemoveEventArgs.cs" />
     <Compile Include="Interop\EventArgs\DeviceRemovedEventArgs.cs" />
     <Compile Include="Interop\EventArgs\DirectoryChangedEventArgs.cs" />
+    <Compile Include="Interop\EventArgs\InstructionChangedEventArgs.cs" />
+    <Compile Include="Interop\EventArgs\InstructionCreatedEventArgs.cs" />
+    <Compile Include="Interop\EventArgs\InstructionRemovedEventArgs.cs" />
     <Compile Include="Interop\EventHandlers\DeviceChangeEventHandler.cs" />
     <Compile Include="Interop\EventHandlers\DirectoryChangedEventHandler.cs" />
+    <Compile Include="Interop\EventHandlers\InstructionManagerEventHandlers.cs" />
     <Compile Include="Models\Device.cs" />
     <Compile Include="Models\Instruction.cs" />
     <Compile Include="Models\Issue.cs" />
@@ -136,6 +141,7 @@
     <Compile Include="Services\DirectoryWatcher.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Services\InstructionManager.cs" />
     <Compile Include="Services\IssueContainer.cs" />
     <Compile Include="Services\Settings.cs" />
     <Compile Include="Services\Settings.Instructions.cs" />
