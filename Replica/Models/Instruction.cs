@@ -31,9 +31,19 @@
 			set { SetField(ref _rootDirectory, value); }
 		}
 
+		public string StorageDirectory {
+			get { return _storageDirectory; }
+			set { SetField(ref _storageDirectory, value); }
+		}
+
 		public bool IsActive {
 			get { return _isActive; }
 			set { SetField(ref _isActive, value); }
+		}
+
+		public bool FileStrictCompare {
+			get { return _fileStrictCompare; }
+			set { SetField(ref _fileStrictCompare, value); }
 		}
 
 		public readonly ObservableCollection<string> Directives;
@@ -44,6 +54,8 @@
 		private string _identifier;
 		private string _deviceSerialNumber;
 		private string _rootDirectory;
+		private string _storageDirectory;
+		private bool _fileStrictCompare;
 
 		private bool _isActive;
 
