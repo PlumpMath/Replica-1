@@ -101,6 +101,10 @@
     <Compile Include="Interfaces\IInstructionManager.cs" />
     <Compile Include="Interfaces\IIssue.cs" />
     <Compile Include="Interfaces\IIssueContainer.cs" />
+    <Compile Include="Interfaces\IMetaFile.cs" />
+    <Compile Include="Interfaces\IMetaLayer.cs" />
+    <Compile Include="Interfaces\IStorage.cs" />
+    <Compile Include="Interfaces\IStorageProvider.cs" />
     <Compile Include="Interfaces\IUnixTime.cs" />
     <Compile Include="Interop\EventArgs\DeviceArrivedEventArgs.cs" />
     <Compile Include="Interop\EventArgs\DeviceQueryRemoveEventArgs.cs" />
@@ -115,6 +119,9 @@
     <Compile Include="Models\Device.cs" />
     <Compile Include="Models\Instruction.cs" />
     <Compile Include="Models\Issue.cs" />
+    <Compile Include="Models\MetaFile.cs" />
+    <Compile Include="Models\MetaLayer.cs" />
+    <Compile Include="Models\Storage.cs" />
     <Compile Include="Native\DeviceBroadcastHandle.cs" />
     <Compile Include="Native\DeviceBroadcastHeader.cs" />
     <Compile Include="Native\DeviceBroadcastMessages.cs" />
@@ -146,6 +153,7 @@
     <Compile Include="Services\Settings.cs" />
     <Compile Include="Services\Settings.Instructions.cs" />
     <Compile Include="Services\Settings.Localization.cs" />
+    <Compile Include="Services\StorageProvider.cs" />
     <Compile Include="Services\UnixTime.cs">
       <SubType>Component</SubType>
     </Compile>
