@@ -28,6 +28,7 @@
 			container.Register<IDirectoryWatcher, Services.DirectoryWatcher>(Lifestyle.Transient);
 			container.RegisterSingleton<IDeviceManager, Services.DeviceManager>();
 			container.RegisterSingleton<IStorageProvider, Services.StorageProvider>();
+			container.RegisterSingleton<IFileDifferenceDetector, Services.FileDifferenceDetector>();
 			container.RegisterSingleton<Services.Settings>(() => Services.Settings.Create(container.GetInstance<IContainer>()));
 
 			// Models
