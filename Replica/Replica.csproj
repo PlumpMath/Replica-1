@@ -97,6 +97,7 @@
     <Compile Include="Interfaces\IDebugger.cs" />
     <Compile Include="Interfaces\IDevice.cs" />
     <Compile Include="Interfaces\IDeviceManager.cs" />
+    <Compile Include="Interfaces\IDirectivesManager.cs" />
     <Compile Include="Interfaces\IDirectoryWatcher.cs" />
     <Compile Include="Interfaces\IFileDifferenceDetector.cs" />
     <Compile Include="Interfaces\IInstructionManager.cs" />
@@ -149,6 +150,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Services\DeviceManager.cs" />
+    <Compile Include="Services\DirectivesManager.cs" />
     <Compile Include="Services\DirectoryWatcher.cs">
       <SubType>Component</SubType>
     </Compile>
